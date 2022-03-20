@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/service/iam"
+	"github.com/aws/aws-sdk-go-v2/service/iam/types"
 	"github.com/elastic/beats/v7/libbeat/logp"
 )
 
@@ -13,7 +14,7 @@ type IAMProvider struct {
 }
 
 func NewIAMProvider(cfg aws.Config) *IAMProvider {
-	svc := iam.New(cfg)
+	svc := iam.NewFromConfig(cfg)
 	return &IAMProvider{
 		client: svc,
 	}
@@ -31,8 +32,7 @@ func (provider IAMProvider) GetIAMRolePermissions(ctx context.Context, roleName 
 			PolicyName: policyId.PolicyName,
 			RoleName:   &roleName,
 		}
-		req := provider.client.GetRolePolicyRequest(input)
-		policy, err := req.Send(ctx)
+		policy, err := provider.client.GetRolePolicy(ctx,input)
 		if err != nil {
 			logp.Error(fmt.Errorf("failed to get policy %s - %w", *policyId.PolicyName, err))
 			continue
@@ -43,12 +43,11 @@ func (provider IAMProvider) GetIAMRolePermissions(ctx context.Context, roleName 
 	return results, nil
 }
 
-func (provider IAMProvider) getAllRolePolicies(ctx context.Context, roleName string) ([]iam.AttachedPolicy, error) {
+func (provider IAMProvider) getAllRolePolicies(ctx context.Context, roleName string) ([]types.AttachedPolicy, error) {
 	input := &iam.ListAttachedRolePoliciesInput{
 		RoleName: &roleName,
 	}
-	req := provider.client.ListAttachedRolePoliciesRequest(input)
-	allPolicies, err := req.Send(ctx)
+	allPolicies, err := provider.client.ListAttachedRolePolicies(ctx, input)
 	if err != nil {
 		return nil, fmt.Errorf("failed to list role %s policies - %w", roleName, err)
 	}

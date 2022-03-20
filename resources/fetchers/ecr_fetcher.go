@@ -3,9 +3,9 @@ package fetchers
 import (
 	"context"
 	"fmt"
+	"github.com/aws/aws-sdk-go-v2/service/ecr/types"
 	"regexp"
 
-	"github.com/aws/aws-sdk-go-v2/service/ecr"
 	"github.com/elastic/beats/v7/libbeat/common/kubernetes"
 	"github.com/elastic/beats/v7/libbeat/logp"
 	"github.com/elastic/cloudbeat/resources/fetching"
@@ -29,7 +29,7 @@ type ECRFetcherConfig struct {
 	Kubeconfig string `config:"Kubeconfig"`
 }
 
-type EcrRepositories []ecr.Repository
+type EcrRepositories []types.Repository
 
 type ECRResource struct {
 	EcrRepositories

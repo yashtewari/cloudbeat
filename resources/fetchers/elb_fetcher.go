@@ -3,14 +3,13 @@ package fetchers
 import (
 	"context"
 	"fmt"
+	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing/types"
 	"regexp"
 
 	"github.com/elastic/beats/v7/libbeat/common/kubernetes"
 	"github.com/elastic/cloudbeat/resources/fetching"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	k8s "k8s.io/client-go/kubernetes"
-
-	"github.com/aws/aws-sdk-go-v2/service/elasticloadbalancing"
 )
 
 const ELBType = "aws-elb"
@@ -28,7 +27,7 @@ type ELBFetcherConfig struct {
 	Kubeconfig string `config:"Kubeconfig"`
 }
 
-type LoadBalancersDescription []elasticloadbalancing.LoadBalancerDescription
+type LoadBalancersDescription []types.LoadBalancerDescription
 
 type ELBResource struct {
 	LoadBalancersDescription
