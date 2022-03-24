@@ -36,9 +36,12 @@ jobs:
           cluster_name: kind-mono
           config: .github/kind-config.yaml
       
-      - name: test k8s
+      - uses: azure/setup-helm@v1
+        id: install
+
+      - name: Deploy test Helm chart
         run: |
-          kubectl cluster-info --context kind-kind-mono
+          exec: helm upgrade --wait --install --values tests/deploy/k8s-cloudbeat-tests/k8s-values.yaml --namespace kube-system --kube-context kind-kind-mono cloudbeat-tests  tests/deploy/k8s-cloudbeat-tests/ 
 
       # - name: Docker build Cloudbeat
       #   run: |
