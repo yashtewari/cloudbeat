@@ -43,7 +43,6 @@ jobs:
         run: |
           helm upgrade --wait --install --values tests/deploy/k8s-cloudbeat-tests/k8s-values.yaml --namespace kube-system --kube-context kind-kind-mono cloudbeat-tests  tests/deploy/k8s-cloudbeat-tests/ 
 
-      - name: Helm Test
-        uses: WyriHaximus/github-action-helm3@v2
-        with:
-          exec: helm test cloudbeat-tests --kube-context kind-kind-mono --logs
+      - name: Deploy tests Helm chart
+        run: |
+          helm test cloudbeat-tests --kube-context kind-kind-mono --logs
