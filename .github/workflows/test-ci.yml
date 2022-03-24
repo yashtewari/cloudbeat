@@ -9,14 +9,6 @@ env:
   K8S_MANIFEST_DIR: deploy/k8s
   GO_VERSION: 1.17.2
 
-# steps:
-# 1. Checkout repo
-# 2. Setup kind
-# 3. Deploy ES on kind with helm
-# 4. Deploy cloudbeat
-# 5. Build & deploy test docker
-# 6. Save artifacts 
-# 7. Show artifacts(gh pages/bucket)
 jobs:
   elastic-deploy:
     runs-on: ubuntu-latest
@@ -39,24 +31,19 @@ jobs:
       - uses: azure/setup-helm@v1
         id: install
 
-      - name: Deploy test Helm chart
+      - name: Docker build Cloudbeat
+        run: |
+          GOOS=linux go build -v && docker build -t cloudbeat .  && kind load docker-image cloudbeat:latest --name kind-mono
+      
+      - name: Docker build tests-container
+        run: |
+          cd tests; docker build -t cloudbeat-test:0.0.6 . && kind load docker-image cloudbeat-test:0.0.6 --name kind-mono
+      
+      - name: Deploy tests Helm chart
         run: |
           helm upgrade --wait --install --values tests/deploy/k8s-cloudbeat-tests/k8s-values.yaml --namespace kube-system --kube-context kind-kind-mono cloudbeat-tests  tests/deploy/k8s-cloudbeat-tests/ 
 
-      # - name: Docker build Cloudbeat
-      #   run: |
-      #     GOOS=linux go build -v && docker build -t cloudbeat .  && kind load docker-image cloudbeat:latest --name kind-mono
-      
-      # - name: Docker build tests-container
-      #   run: |
-      #     cd tests; docker build -t cloudbeat-test:0.0.6 . && kind load docker-image cloudbeat-test:0.0.6 --name kind-mono
-      
-      # - name: Deploy test Helm chart
-      #   uses: WyriHaximus/github-action-helm3@v2
-      #   with:
-      #     exec: helm upgrade --wait --install --values tests/deploy/k8s-cloudbeat-tests/k8s-values.yaml --namespace kube-system --kube-context kind-kind-mono cloudbeat-tests  tests/deploy/k8s-cloudbeat-tests/ 
-
-      # - name: Helm Test
-      #   uses: WyriHaximus/github-action-helm3@v2
-      #   with:
-      #     exec: helm test cloudbeat-tests --kube-context kind-kind-mono --logs
+      - name: Helm Test
+        uses: WyriHaximus/github-action-helm3@v2
+        with:
+          exec: helm test cloudbeat-tests --kube-context kind-kind-mono --logs
