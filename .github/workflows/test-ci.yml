@@ -48,6 +48,10 @@ jobs:
         with:
           time: '60s'
 
-      - name: run tests
+      - name: Get cloudbeat logs
         run: |
-          helm test cloudbeat-tests --namespace kube-system --kube-context kind-kind-mono --logs
+          timeout 45 kubectl logs -f --selector="k8s-app=cloudbeat" -n kube-system || code=$?; if [[ $code -ne 124 && $code -ne 0 ]]; then exit $code; fi
+
+      # - name: run tests
+      #   run: |
+      #     helm test cloudbeat-tests --namespace kube-system --kube-context kind-kind-mono --logs
