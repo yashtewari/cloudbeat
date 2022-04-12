@@ -1,0 +1,94 @@
+{
+    "@timestamp": "2022-04-12T13:05:55.082Z",
+    "agent": {
+        "ephemeral_id": "9cf73135-8883-46f1-a055-2b1212e869a7",
+        "id": "ef5ce3ee-bad8-474c-a793-7ea722195cac",
+        "name": "kind-mono-control-plane",
+        "type": "cloudbeat",
+        "version": "8.3.0"
+    },
+    "cloud": {
+        "account": {},
+        "instance": {
+            "id": "27eb5648-bd58-4569-a0c0-282b1fe991ab",
+            "name": "WUS3-GHEUS3U20WUS3C13-0069"
+        },
+        "machine": {
+            "type": "Standard_DS2_v2"
+        },
+        "provider": "azure",
+        "region": "WestUS3",
+        "service": {
+            "name": "Virtual Machines"
+        }
+    },
+    "cluster_id": "41b0a96f-6f22-4305-a7d8-a9c68c7c5e45",
+    "cycle_id": "48be01ff-8b5b-4263-87a0-ea2eee26fc6d",
+    "ecs": {
+        "version": "8.0.0"
+    },
+    "host": {
+        "architecture": "x86_64",
+        "containerized": true,
+        "hostname": "kind-mono-control-plane",
+        "ip": [
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "172.18.0.2",
+            "fc00:f853:ccd:e793::2",
+            "fe80::42:acff:fe12:2"
+        ],
+        "mac": [
+            "6e:36:f6:01:3f:6b",
+            "ce:83:2d:e4:ef:21",
+            "a6:ec:b7:63:8a:3b",
+            "ca:00:9e:c5:f6:69",
+            "02:42:ac:12:00:02"
+        ],
+        "name": "kind-mono-control-plane",
+        "os": {
+            "codename": "bullseye",
+            "family": "debian",
+            "kernel": "5.13.0-1021-azure",
+            "name": "Debian GNU/Linux",
+            "platform": "debian",
+            "type": "linux",
+            "version": "11 (bullseye)"
+        }
+    },
+    "resource": {
+        "filename": "pki",
+        "gid": "root",
+        "inode": "1321501",
+        "mode": "755",
+        "path": "/hostfs/etc/kubernetes/pki",
+        "uid": "root"
+    },
+    "resource_id": "1321501",
+    "result": {
+        "evaluation": "passed",
+        "evidence": {
+            "gid": "root",
+            "uid": "root"
+        }
+    },
+    "rule": {
+        "benchmark": {
+            "name": "CIS Kubernetes V1.20",
+            "version": "v1.0.0"
+        },
+        "description": "Kubernetes makes use of a number of certificates as part of its operation. You should set the ownership of the directory containing the PKI information and all files in that directory to maintain their integrity. The directory and files should be owned by root:root.",
+        "impact": "None",
+        "name": "Ensure that the Kubernetes PKI directory and file ownership is set to root:root",
+        "remediation": "chown -R root:root /etc/kubernetes/pki/",
+        "tags": [
+            "CIS",
+            "Kubernetes",
+            "CIS 1.1.19",
+            "Master Node Configuration"
+        ]
+    },
+    "type": "file-system"
+}

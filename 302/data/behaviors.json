@@ -1,0 +1,70 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "test_elastic_index_exists[file-system]",
+    "uid" : "3381659b6618ecad",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649768765905,
+      "stop" : 1649768766451,
+      "duration" : 546
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'file-system'" ]
+  }, {
+    "name" : "test_elastic_index_exists[process]",
+    "uid" : "cc399ca541b8a965",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649768766454,
+      "stop" : 1649768766531,
+      "duration" : 77
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'process'" ]
+  }, {
+    "name" : "test_elastic_index_exists[kube-api]",
+    "uid" : "232bbdd364f78911",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649768766535,
+      "stop" : 1649768766551,
+      "duration" : 16
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'kube-api'" ]
+  }, {
+    "name" : "test_cloudbeat_pod_exist",
+    "uid" : "8d13f3a7d7239f7c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649768766670,
+      "stop" : 1649768766670,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_cloudbeat_pods_running",
+    "uid" : "5f7025b26e055342",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1649768766715,
+      "stop" : 1649768766715,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ],
+  "name" : "behaviors"
+}
