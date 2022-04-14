@@ -4,12 +4,12 @@
     "name" : "integration.tests.test_output_to_elasticsearch",
     "children" : [ {
       "name" : "test_elastic_index_exists[file-system]",
-      "uid" : "d50038e925f1d19f",
+      "uid" : "c627e65e3e4b3bea",
       "parentUid" : "2486f8c3a69fed2cd31004c407a07af0",
       "status" : "broken",
       "time" : {
-        "start" : 1649938280070,
-        "stop" : 1649938280070,
+        "start" : 1649948486469,
+        "stop" : 1649948486469,
         "duration" : 0
       },
       "flaky" : false,
@@ -17,12 +17,12 @@
       "parameters" : [ "'file-system'" ]
     }, {
       "name" : "test_elastic_index_exists[process]",
-      "uid" : "51ee2377b275548b",
+      "uid" : "35b2d4d9aa3df25d",
       "parentUid" : "2486f8c3a69fed2cd31004c407a07af0",
       "status" : "broken",
       "time" : {
-        "start" : 1649938280413,
-        "stop" : 1649938280413,
+        "start" : 1649948486778,
+        "stop" : 1649948486778,
         "duration" : 0
       },
       "flaky" : false,
@@ -30,12 +30,12 @@
       "parameters" : [ "'process'" ]
     }, {
       "name" : "test_elastic_index_exists[kube-api]",
-      "uid" : "5974d971933bc137",
+      "uid" : "2b513a39770afddd",
       "parentUid" : "2486f8c3a69fed2cd31004c407a07af0",
       "status" : "broken",
       "time" : {
-        "start" : 1649938280654,
-        "stop" : 1649938280654,
+        "start" : 1649948486980,
+        "stop" : 1649948486980,
         "duration" : 0
       },
       "flaky" : false,
@@ -49,12 +49,12 @@
       "name" : "test_cloudbeat",
       "children" : [ {
         "name" : "test_cloudbeat_pod_exist",
-        "uid" : "4aa8fc7e1bf268f3",
+        "uid" : "290ca0afc1892f3e",
         "parentUid" : "4dd822d9bf635fe1910b9d1367e2d31a",
         "status" : "broken",
         "time" : {
-          "start" : 1649938280933,
-          "stop" : 1649938280933,
+          "start" : 1649948487224,
+          "stop" : 1649948487224,
           "duration" : 0
         },
         "flaky" : false,
@@ -62,12 +62,12 @@
         "parameters" : [ ]
       }, {
         "name" : "test_cloudbeat_pods_running",
-        "uid" : "fe77d3a651e3509e",
+        "uid" : "42804df4eca2b618",
         "parentUid" : "4dd822d9bf635fe1910b9d1367e2d31a",
         "status" : "broken",
         "time" : {
-          "start" : 1649938281171,
-          "stop" : 1649938281171,
+          "start" : 1649948487428,
+          "stop" : 1649948487428,
           "duration" : 0
         },
         "flaky" : false,
@@ -79,12 +79,12 @@
       "name" : "test_rules",
       "children" : [ {
         "name" : "test_master_node_configuration[CIS 1.1.1 mode 700]",
-        "uid" : "192c1d490632362b",
+        "uid" : "e7fb021fad4eafcd",
         "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
         "status" : "broken",
         "time" : {
-          "start" : 1649938281441,
-          "stop" : 1649938281441,
+          "start" : 1649948487680,
+          "stop" : 1649948487680,
           "duration" : 0
         },
         "flaky" : false,
@@ -92,12 +92,12 @@
         "parameters" : [ "'chmod'", "'failed'", "'700'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.1'" ]
       }, {
         "name" : "test_master_node_configuration[CIS 1.1.1 mode 644]",
-        "uid" : "ca55904215b8feca",
+        "uid" : "df195018d1b22966",
         "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
         "status" : "broken",
         "time" : {
-          "start" : 1649938281676,
-          "stop" : 1649938281676,
+          "start" : 1649948487891,
+          "stop" : 1649948487891,
           "duration" : 0
         },
         "flaky" : false,
@@ -105,12 +105,12 @@
         "parameters" : [ "'chmod'", "'passed'", "'644'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.1'" ]
       }, {
         "name" : "test_master_node_configuration[CIS 1.1.2 daemon:daemon]",
-        "uid" : "994e257eff2f127d",
+        "uid" : "33baf76b754631ff",
         "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
         "status" : "broken",
         "time" : {
-          "start" : 1649938281939,
-          "stop" : 1649938281939,
+          "start" : 1649948488146,
+          "stop" : 1649948488146,
           "duration" : 0
         },
         "flaky" : false,
@@ -118,12 +118,12 @@
         "parameters" : [ "'chown'", "'failed'", "'daemon:daemon'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.2'" ]
       }, {
         "name" : "test_master_node_configuration[CIS 1.1.2 root:root]",
-        "uid" : "9066b858e0cb4683",
+        "uid" : "6a684533dc59cdd7",
         "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
         "status" : "broken",
         "time" : {
-          "start" : 1649938282172,
-          "stop" : 1649938282172,
+          "start" : 1649948488352,
+          "stop" : 1649948488352,
           "duration" : 0
         },
         "flaky" : false,

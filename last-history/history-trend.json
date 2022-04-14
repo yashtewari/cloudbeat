@@ -11,6 +11,18 @@
     "total" : 9
   }
 }, {
+  "buildOrder" : 312,
+  "reportUrl" : "https://elastic.github.io/cloudbeat/312/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 9,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 9
+  }
+}, {
   "buildOrder" : 311,
   "reportUrl" : "https://elastic.github.io/cloudbeat/311/",
   "reportName" : "Allure Report with history",

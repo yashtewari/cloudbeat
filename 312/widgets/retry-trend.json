@@ -7,6 +7,14 @@
     "retry" : 0
   }
 }, {
+  "buildOrder" : 312,
+  "reportUrl" : "https://elastic.github.io/cloudbeat/312/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 9,
+    "retry" : 0
+  }
+}, {
   "buildOrder" : 311,
   "reportUrl" : "https://elastic.github.io/cloudbeat/311/",
   "reportName" : "Allure Report with history",
