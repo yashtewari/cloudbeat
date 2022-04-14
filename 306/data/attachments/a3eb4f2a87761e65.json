@@ -1,0 +1,102 @@
+{
+    "@timestamp": "2022-04-14T07:16:00.799Z",
+    "agent": {
+        "ephemeral_id": "3cb2637e-4a12-4eec-ac9f-95a75a340919",
+        "id": "da1de8b3-33fa-4818-9579-b1c7a1904fbc",
+        "name": "kind-mono-control-plane",
+        "type": "cloudbeat",
+        "version": "8.3.0"
+    },
+    "cloud": {
+        "account": {},
+        "instance": {
+            "id": "458a30a6-4a72-4486-aba2-1d18f521e470",
+            "name": "EUS-GHEUS21U20EUSC33-0185"
+        },
+        "machine": {
+            "type": "Standard_DS2_v2"
+        },
+        "provider": "azure",
+        "region": "eastus",
+        "service": {
+            "name": "Virtual Machines"
+        }
+    },
+    "cluster_id": "e0358fda-cdce-4b99-9799-389d32bf9f79",
+    "cycle_id": "1d20a72e-e05b-4dcb-be4d-42a85c647377",
+    "ecs": {
+        "version": "8.0.0"
+    },
+    "host": {
+        "architecture": "x86_64",
+        "containerized": true,
+        "hostname": "kind-mono-control-plane",
+        "ip": [
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "172.18.0.2",
+            "fc00:f853:ccd:e793::2",
+            "fe80::42:acff:fe12:2"
+        ],
+        "mac": [
+            "ce:3e:0a:7d:0c:02",
+            "22:cc:db:84:4f:ba",
+            "0a:b2:49:87:63:c6",
+            "5a:2e:92:f2:bb:5e",
+            "02:42:ac:12:00:02"
+        ],
+        "name": "kind-mono-control-plane",
+        "os": {
+            "codename": "bullseye",
+            "family": "debian",
+            "kernel": "5.13.0-1021-azure",
+            "name": "Debian GNU/Linux",
+            "platform": "debian",
+            "type": "linux",
+            "version": "11 (bullseye)"
+        }
+    },
+    "resource": {
+        "apiVersion": "v1",
+        "kind": "ServiceAccount",
+        "metadata": {
+            "creationTimestamp": "2022-04-14T07:12:15Z",
+            "name": "root-ca-cert-publisher",
+            "namespace": "kube-system",
+            "resourceVersion": "270",
+            "uid": "b2cb2484-5027-4e10-8980-e203b2e4c3ee"
+        },
+        "secrets": [
+            {
+                "name": "root-ca-cert-publisher-token-h2d8g"
+            }
+        ]
+    },
+    "resource_id": "b2cb2484-5027-4e10-8980-e203b2e4c3ee",
+    "result": {
+        "evaluation": "passed",
+        "evidence": {
+            "serviceAccount": [],
+            "serviceAccounts": []
+        }
+    },
+    "rule": {
+        "benchmark": {
+            "name": "CIS Kubernetes V1.20",
+            "version": "v1.0.0"
+        },
+        "description": "The default service account should not be used to ensure that rights granted to\napplications can be more easily audited and reviewed.",
+        "impact": "All workloads which require access to the Kubernetes API will require an explicit service\naccount to be created.",
+        "name": "Ensure that default service accounts are not actively used",
+        "remediation": "Create explicit service accounts wherever a Kubernetes workload requires specific access to the Kubernetes API server.\nModify the configuration of each default service account to include this value automountServiceAccountToken: false",
+        "tags": [
+            "CIS",
+            "Kubernetes",
+            "CIS 5.1.5",
+            "RBAC and Service Accounts"
+        ]
+    },
+    "type": "kube-api"
+}
