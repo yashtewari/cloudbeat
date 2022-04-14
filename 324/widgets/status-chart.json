@@ -1,0 +1,91 @@
+[ {
+  "uid" : "85f27bda38875a01",
+  "name" : "test_master_node_configuration[CIS 1.1.2 daemon:daemon]",
+  "time" : {
+    "start" : 1649957522599,
+    "stop" : 1649957522599,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "f5e610d5da3e8f82",
+  "name" : "test_elastic_index_exists[kube-api]",
+  "time" : {
+    "start" : 1649957521274,
+    "stop" : 1649957521274,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "79c19a80b578b8f0",
+  "name" : "test_master_node_configuration[CIS 1.1.1 mode 644]",
+  "time" : {
+    "start" : 1649957522318,
+    "stop" : 1649957522318,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "49ff6c8fcf68c3ec",
+  "name" : "test_elastic_index_exists[file-system]",
+  "time" : {
+    "start" : 1649957520626,
+    "stop" : 1649957520627,
+    "duration" : 1
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "84473d69d97aa33f",
+  "name" : "test_master_node_configuration[CIS 1.1.2 root:root]",
+  "time" : {
+    "start" : 1649957522837,
+    "stop" : 1649957522838,
+    "duration" : 1
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "426a62592efd81d5",
+  "name" : "test_cloudbeat_pod_exist",
+  "time" : {
+    "start" : 1649957521558,
+    "stop" : 1649957521558,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "96286c033e3c9b45",
+  "name" : "test_master_node_configuration[CIS 1.1.1 mode 700]",
+  "time" : {
+    "start" : 1649957522077,
+    "stop" : 1649957522077,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "240d0c230c5f94f2",
+  "name" : "test_cloudbeat_pods_running",
+  "time" : {
+    "start" : 1649957521800,
+    "stop" : 1649957521800,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ed5b382983d4ce51",
+  "name" : "test_elastic_index_exists[process]",
+  "time" : {
+    "start" : 1649957520970,
+    "stop" : 1649957520970,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
