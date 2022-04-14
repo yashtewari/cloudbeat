@@ -1,0 +1,138 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "integration.tests.test_output_to_elasticsearch",
+    "children" : [ {
+      "name" : "test_elastic_index_exists[file-system]",
+      "uid" : "85511bf2c9ad62e4",
+      "parentUid" : "2486f8c3a69fed2cd31004c407a07af0",
+      "status" : "broken",
+      "time" : {
+        "start" : 1649955843531,
+        "stop" : 1649955843531,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'file-system'" ]
+    }, {
+      "name" : "test_elastic_index_exists[process]",
+      "uid" : "c0b06273ce86b6b2",
+      "parentUid" : "2486f8c3a69fed2cd31004c407a07af0",
+      "status" : "broken",
+      "time" : {
+        "start" : 1649955843897,
+        "stop" : 1649955843897,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'process'" ]
+    }, {
+      "name" : "test_elastic_index_exists[kube-api]",
+      "uid" : "1c3707e75be6efb2",
+      "parentUid" : "2486f8c3a69fed2cd31004c407a07af0",
+      "status" : "broken",
+      "time" : {
+        "start" : 1649955844168,
+        "stop" : 1649955844168,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "'kube-api'" ]
+    } ],
+    "uid" : "integration.tests.test_output_to_elasticsearch"
+  }, {
+    "name" : "product.tests",
+    "children" : [ {
+      "name" : "test_cloudbeat",
+      "children" : [ {
+        "name" : "test_cloudbeat_pod_exist",
+        "uid" : "f55abadc2dfd77e6",
+        "parentUid" : "4dd822d9bf635fe1910b9d1367e2d31a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1649955844464,
+          "stop" : 1649955844464,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_cloudbeat_pods_running",
+        "uid" : "9ab5bacc435bffff",
+        "parentUid" : "4dd822d9bf635fe1910b9d1367e2d31a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1649955844716,
+          "stop" : 1649955844716,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4dd822d9bf635fe1910b9d1367e2d31a"
+    }, {
+      "name" : "test_rules",
+      "children" : [ {
+        "name" : "test_master_node_configuration[CIS 1.1.1 mode 700]",
+        "uid" : "9976af54ab020b99",
+        "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
+        "status" : "broken",
+        "time" : {
+          "start" : 1649955845008,
+          "stop" : 1649955845008,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chmod'", "'failed'", "'700'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.1'" ]
+      }, {
+        "name" : "test_master_node_configuration[CIS 1.1.1 mode 644]",
+        "uid" : "1d1e4beca5838b17",
+        "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
+        "status" : "broken",
+        "time" : {
+          "start" : 1649955845265,
+          "stop" : 1649955845265,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chmod'", "'passed'", "'644'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.1'" ]
+      }, {
+        "name" : "test_master_node_configuration[CIS 1.1.2 daemon:daemon]",
+        "uid" : "a218cc27fe5ad26b",
+        "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
+        "status" : "broken",
+        "time" : {
+          "start" : 1649955845572,
+          "stop" : 1649955845572,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chown'", "'failed'", "'daemon:daemon'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.2'" ]
+      }, {
+        "name" : "test_master_node_configuration[CIS 1.1.2 root:root]",
+        "uid" : "a159ae9b75b39eae",
+        "parentUid" : "994fbff796d9c6d3725a9ba1956f7f52",
+        "status" : "broken",
+        "time" : {
+          "start" : 1649955845836,
+          "stop" : 1649955845836,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chown'", "'passed'", "'root:root'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.2'" ]
+      } ],
+      "uid" : "994fbff796d9c6d3725a9ba1956f7f52"
+    } ],
+    "uid" : "product.tests"
+  } ],
+  "name" : "packages"
+}
