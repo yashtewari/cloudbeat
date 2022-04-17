@@ -1,0 +1,130 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "test-pod-v1",
+    "children" : [ {
+      "name" : "7-MainThread",
+      "children" : [ {
+        "name" : "test_master_node_configuration[CIS 1.1.2 root:root]",
+        "uid" : "6afd8ee08d8b8f1d",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191581131,
+          "stop" : 1650191581131,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chown'", "'passed'", "'root:root'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.2'" ]
+      }, {
+        "name" : "test_elastic_index_exists[process]",
+        "uid" : "94ea6a9dfe77e98e",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191579545,
+          "stop" : 1650191579545,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'process'" ]
+      }, {
+        "name" : "test_master_node_configuration[CIS 1.1.1 mode 644]",
+        "uid" : "ddd9d09e58d5f525",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191580638,
+          "stop" : 1650191580638,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chmod'", "'passed'", "'644'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.1'" ]
+      }, {
+        "name" : "test_cloudbeat_pods_running",
+        "uid" : "822e578fcc7a8275",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191580189,
+          "stop" : 1650191580189,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_master_node_configuration[CIS 1.1.1 mode 700]",
+        "uid" : "4ee3a6a37b33336b",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191580423,
+          "stop" : 1650191580423,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chmod'", "'failed'", "'700'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.1'" ]
+      }, {
+        "name" : "test_elastic_index_exists[kube-api]",
+        "uid" : "e892233cbb88a80",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191579742,
+          "stop" : 1650191579742,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'kube-api'" ]
+      }, {
+        "name" : "test_cloudbeat_pod_exist",
+        "uid" : "8b6b96c33f7423e9",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191579966,
+          "stop" : 1650191579966,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_elastic_index_exists[file-system]",
+        "uid" : "9ef6de7f2dc3a4cd",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191579265,
+          "stop" : 1650191579265,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'file-system'" ]
+      }, {
+        "name" : "test_master_node_configuration[CIS 1.1.2 daemon:daemon]",
+        "uid" : "d2bbf513b6e92264",
+        "parentUid" : "39818cacd46030fb577dd3f4e6539796",
+        "status" : "broken",
+        "time" : {
+          "start" : 1650191580913,
+          "stop" : 1650191580913,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chown'", "'failed'", "'daemon:daemon'", "'/etc/kubernetes/manifests/kube-apiserver.yaml'", "'CIS 1.1.2'" ]
+      } ],
+      "uid" : "39818cacd46030fb577dd3f4e6539796"
+    } ],
+    "uid" : "be51299377647cf7dca25749f9347755"
+  } ],
+  "name" : "timeline"
+}
