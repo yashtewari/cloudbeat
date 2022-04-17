@@ -1,0 +1,338 @@
+{
+  "uid" : "3157059f6120b65",
+  "name" : "test_cloudbeat_pods_running",
+  "fullName" : "product.tests.test_cloudbeat#test_cloudbeat_pods_running",
+  "historyId" : "3b2fce48ece491575a06d23ab8f2970e",
+  "time" : {
+    "start" : 1650208458910,
+    "stop" : 1650208458910,
+    "duration" : 0
+  },
+  "description" : "\n    This test verifies that all pods are in status \"Running\"\n    :param data: (Pods list, Nodes list)\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that all pods are in status &quot;Running&quot;\n:param data: (Pods list, Nodes list)\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "elastic_client",
+    "time" : {
+      "start" : 1650208457713,
+      "stop" : 1650208457714,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "k8s",
+    "time" : {
+      "start" : 1650208457714,
+      "stop" : 1650208457715,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "cloudbeat_agent",
+    "time" : {
+      "start" : 1650208457713,
+      "stop" : 1650208457713,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1650208457713,
+      "stop" : 1650208457713,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "data",
+    "time" : {
+      "start" : 1650208458866,
+      "stop" : 1650208458909,
+      "duration" : 43
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "ci_cloudbeat"
+  }, {
+    "name" : "tag",
+    "value" : "product"
+  }, {
+    "name" : "tag",
+    "value" : "sanity"
+  }, {
+    "name" : "parentSuite",
+    "value" : "product.tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_cloudbeat"
+  }, {
+    "name" : "host",
+    "value" : "test-pod-v1"
+  }, {
+    "name" : "thread",
+    "value" : "9-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "product.tests.test_cloudbeat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 11,
+        "skipped" : 0,
+        "passed" : 29,
+        "unknown" : 0,
+        "total" : 40
+      },
+      "items" : [ {
+        "uid" : "97294558e9e3556d",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/336//#testresult/97294558e9e3556d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650207094841,
+          "stop" : 1650207094841,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "4d54538bd171ec66",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/335//#testresult/4d54538bd171ec66",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650204424249,
+          "stop" : 1650204424249,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "e5c8deac346c5321",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/334//#testresult/e5c8deac346c5321",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650201213687,
+          "stop" : 1650201213688,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "16194bce5c25e2ce",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/332//#testresult/16194bce5c25e2ce",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650199242369,
+          "stop" : 1650199242369,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "c13e721d711b7e72",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/333//#testresult/c13e721d711b7e72",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650199176292,
+          "stop" : 1650199176292,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "748d41e4b36a0bd1",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/331//#testresult/748d41e4b36a0bd1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650198579477,
+          "stop" : 1650198579477,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "183a42b406bd9d60",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/330//#testresult/183a42b406bd9d60",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650198369232,
+          "stop" : 1650198369232,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "998bae8af2d34cfc",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/329//#testresult/998bae8af2d34cfc",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1650193045038,
+          "stop" : 1650193045038,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ab6052d2b70885ea",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/328//#testresult/ab6052d2b70885ea",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1650192902095,
+          "stop" : 1650192902095,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "822e578fcc7a8275",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/325//#testresult/822e578fcc7a8275",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1650191580189,
+          "stop" : 1650191580189,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9be839eab48251c3",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/327//#testresult/9be839eab48251c3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650191962062,
+          "stop" : 1650191962062,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d3a2c6e05fca0a05",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/326//#testresult/d3a2c6e05fca0a05",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650191862175,
+          "stop" : 1650191862176,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "81bddf1e9901a740",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/324//#testresult/81bddf1e9901a740",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1650190652030,
+          "stop" : 1650190652030,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "240d0c230c5f94f2",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/324//#testresult/240d0c230c5f94f2",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1649957521800,
+          "stop" : 1649957521800,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ec924be9718a6f7c",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/323//#testresult/ec924be9718a6f7c",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1649957473741,
+          "stop" : 1649957473741,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "2396ee6b896c712c",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/322//#testresult/2396ee6b896c712c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649956916928,
+          "stop" : 1649956916928,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f17f33e4cb10de00",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/321//#testresult/f17f33e4cb10de00",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649956517322,
+          "stop" : 1649956517323,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "9ab5bacc435bffff",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/320//#testresult/9ab5bacc435bffff",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1649955844716,
+          "stop" : 1649955844716,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "7c52a161139be9fb",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/319//#testresult/7c52a161139be9fb",
+        "status" : "broken",
+        "statusDetails" : "docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))",
+        "time" : {
+          "start" : 1649955536164,
+          "stop" : 1649955536164,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "4e192df9cfeb0461",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/318//#testresult/4e192df9cfeb0461",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649955387727,
+          "stop" : 1649955387727,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "product", "ci_cloudbeat", "sanity" ]
+  },
+  "source" : "3157059f6120b65.json",
+  "parameterValues" : [ ]
+}
