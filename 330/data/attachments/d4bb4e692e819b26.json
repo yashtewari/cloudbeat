@@ -1,0 +1,102 @@
+{
+    "@timestamp": "2022-04-17T12:25:58.015Z",
+    "agent": {
+        "ephemeral_id": "f476dd7f-9d85-491c-be0f-c951a056ebc3",
+        "id": "c8156c52-82ba-4237-951f-628b2a7e2b76",
+        "name": "kind-mono-control-plane",
+        "type": "cloudbeat",
+        "version": "8.3.0"
+    },
+    "cloud": {
+        "account": {},
+        "instance": {
+            "id": "4812489b-3a2b-4ef1-b71b-b630ef5a4d4c",
+            "name": "EUS-GHEUS21UBT20EUS5-0257"
+        },
+        "machine": {
+            "type": "Standard_DS2_v2"
+        },
+        "provider": "azure",
+        "region": "eastus",
+        "service": {
+            "name": "Virtual Machines"
+        }
+    },
+    "cluster_id": "1e1b06ac-e62b-489e-a798-91531601f6d2",
+    "cycle_id": "79a45918-791f-4b71-a422-87092fdf815f",
+    "ecs": {
+        "version": "8.0.0"
+    },
+    "host": {
+        "architecture": "x86_64",
+        "containerized": true,
+        "hostname": "kind-mono-control-plane",
+        "ip": [
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "172.18.0.2",
+            "fc00:f853:ccd:e793::2",
+            "fe80::42:acff:fe12:2"
+        ],
+        "mac": [
+            "3a:ee:24:b0:24:c9",
+            "36:6b:3e:94:7a:fc",
+            "56:04:0a:4d:6f:be",
+            "8a:75:1a:e6:84:7a",
+            "02:42:ac:12:00:02"
+        ],
+        "name": "kind-mono-control-plane",
+        "os": {
+            "codename": "bullseye",
+            "family": "debian",
+            "kernel": "5.13.0-1021-azure",
+            "name": "Debian GNU/Linux",
+            "platform": "debian",
+            "type": "linux",
+            "version": "11 (bullseye)"
+        }
+    },
+    "resource": {
+        "apiVersion": "v1",
+        "kind": "ServiceAccount",
+        "metadata": {
+            "creationTimestamp": "2022-04-17T12:16:39Z",
+            "name": "endpointslicemirroring-controller",
+            "namespace": "kube-system",
+            "resourceVersion": "358",
+            "uid": "e24078c8-3a1e-43ab-aa85-9c6ea3347ebd"
+        },
+        "secrets": [
+            {
+                "name": "endpointslicemirroring-controller-token-797ct"
+            }
+        ]
+    },
+    "resource_id": "e24078c8-3a1e-43ab-aa85-9c6ea3347ebd",
+    "result": {
+        "evaluation": "passed",
+        "evidence": {
+            "serviceAccount": [],
+            "serviceAccounts": []
+        }
+    },
+    "rule": {
+        "benchmark": {
+            "name": "CIS Kubernetes V1.20",
+            "version": "v1.0.0"
+        },
+        "description": "The default service account should not be used to ensure that rights granted to\napplications can be more easily audited and reviewed.",
+        "impact": "All workloads which require access to the Kubernetes API will require an explicit service\naccount to be created.",
+        "name": "Ensure that default service accounts are not actively used",
+        "remediation": "Create explicit service accounts wherever a Kubernetes workload requires specific access to the Kubernetes API server.\nModify the configuration of each default service account to include this value automountServiceAccountToken: false",
+        "tags": [
+            "CIS",
+            "Kubernetes",
+            "CIS 5.1.5",
+            "RBAC and Service Accounts"
+        ]
+    },
+    "type": "kube-api"
+}
