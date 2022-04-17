@@ -3,6 +3,13 @@
   "reportUrl" : "https://elastic.github.io/cloudbeat/324/",
   "reportName" : "Allure Report with history",
   "data" : {
+    "duration" : 1809
+  }
+}, {
+  "buildOrder" : 324,
+  "reportUrl" : "https://elastic.github.io/cloudbeat/324/",
+  "reportName" : "Allure Report with history",
+  "data" : {
     "duration" : 2212
   }
 }, {
@@ -131,9 +138,4 @@
   "data" : {
     "duration" : 1589
   }
-}, {
-  "buildOrder" : 305,
-  "reportUrl" : "https://elastic.github.io/cloudbeat/305/",
-  "reportName" : "Allure Report with history",
-  "data" : { }
 } ]

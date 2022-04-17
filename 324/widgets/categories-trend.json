@@ -6,6 +6,13 @@
     "Test defects" : 9
   }
 }, {
+  "buildOrder" : 324,
+  "reportUrl" : "https://elastic.github.io/cloudbeat/324/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "Test defects" : 9
+  }
+}, {
   "buildOrder" : 323,
   "reportUrl" : "https://elastic.github.io/cloudbeat/323/",
   "reportName" : "Allure Report with history",
@@ -105,11 +112,6 @@
 }, {
   "buildOrder" : 306,
   "reportUrl" : "https://elastic.github.io/cloudbeat/306/",
-  "reportName" : "Allure Report with history",
-  "data" : { }
-}, {
-  "buildOrder" : 305,
-  "reportUrl" : "https://elastic.github.io/cloudbeat/305/",
   "reportName" : "Allure Report with history",
   "data" : { }
 } ]

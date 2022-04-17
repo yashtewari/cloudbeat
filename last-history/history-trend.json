@@ -11,6 +11,18 @@
     "total" : 9
   }
 }, {
+  "buildOrder" : 324,
+  "reportUrl" : "https://elastic.github.io/cloudbeat/324/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "failed" : 0,
+    "broken" : 9,
+    "skipped" : 0,
+    "passed" : 0,
+    "unknown" : 0,
+    "total" : 9
+  }
+}, {
   "buildOrder" : 323,
   "reportUrl" : "https://elastic.github.io/cloudbeat/323/",
   "reportName" : "Allure Report with history",
@@ -225,17 +237,5 @@
     "passed" : 5,
     "unknown" : 0,
     "total" : 5
-  }
-}, {
-  "buildOrder" : 305,
-  "reportUrl" : "https://elastic.github.io/cloudbeat/305/",
-  "reportName" : "Allure Report with history",
-  "data" : {
-    "failed" : 0,
-    "broken" : 0,
-    "skipped" : 0,
-    "passed" : 0,
-    "unknown" : 0,
-    "total" : 0
   }
 } ]
