@@ -1,0 +1,238 @@
+{
+    "@timestamp": "2022-04-18T16:00:34.972Z",
+    "agent": {
+        "ephemeral_id": "32b9ec19-f068-4d7b-8403-860dd90e6350",
+        "id": "2fb74cb1-a9cf-49d1-b0eb-b369a9446957",
+        "name": "kind-mono-control-plane",
+        "type": "cloudbeat",
+        "version": "8.3.0"
+    },
+    "cloud": {
+        "account": {},
+        "instance": {
+            "id": "f8c0362a-bbdf-4cec-a76b-bd4312f7ff9c",
+            "name": "EUS-EUS21GHUBT20EUS00-0479"
+        },
+        "machine": {
+            "type": "Standard_DS2_v2"
+        },
+        "provider": "azure",
+        "region": "eastus",
+        "service": {
+            "name": "Virtual Machines"
+        }
+    },
+    "cluster_id": "ad154a8c-9511-4bc9-b22a-1e0ba0582a17",
+    "cycle_id": "e4c1b983-ee12-447c-a1a0-59131c93f4a8",
+    "ecs": {
+        "version": "8.0.0"
+    },
+    "host": {
+        "architecture": "x86_64",
+        "containerized": true,
+        "hostname": "kind-mono-control-plane",
+        "ip": [
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "172.18.0.2",
+            "fc00:f853:ccd:e793::2",
+            "fe80::42:acff:fe12:2"
+        ],
+        "mac": [
+            "02:42:ac:12:00:02",
+            "12:a1:8d:c5:66:4f",
+            "52:a0:41:a8:d0:85",
+            "b2:5d:e7:37:73:5a",
+            "c6:cb:c6:c9:c6:9f"
+        ],
+        "name": "kind-mono-control-plane",
+        "os": {
+            "codename": "bullseye",
+            "family": "debian",
+            "kernel": "5.13.0-1021-azure",
+            "name": "Debian GNU/Linux",
+            "platform": "debian",
+            "type": "linux",
+            "version": "11 (bullseye)"
+        }
+    },
+    "resource": {
+        "command": "/usr/bin/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --kubeconfig=/etc/kubernetes/kubelet.conf --config=/var/lib/kubelet/config.yaml --container-runtime=remote --container-runtime-endpoint=unix:///run/containerd/containerd.sock --fail-swap-on=false --node-ip=172.18.0.2 --node-labels= --pod-infra-container-image=k8s.gcr.io/pause:3.4.1 --provider-id=kind://docker/kind-mono/kind-mono-control-plane --fail-swap-on=false --cgroup-root=/kubelet",
+        "external_data": {
+            "config": {
+                "apiVersion": "kubelet.config.k8s.io/v1beta1",
+                "authentication": {
+                    "anonymous": {
+                        "enabled": false
+                    },
+                    "webhook": {
+                        "cacheTTL": "0s",
+                        "enabled": true
+                    },
+                    "x509": {
+                        "clientCAFile": "/etc/kubernetes/pki/ca.crt"
+                    }
+                },
+                "authorization": {
+                    "mode": "Webhook",
+                    "webhook": {
+                        "cacheAuthorizedTTL": "0s",
+                        "cacheUnauthorizedTTL": "0s"
+                    }
+                },
+                "cgroupDriver": "cgroupfs",
+                "clusterDNS": [
+                    "10.96.0.10"
+                ],
+                "clusterDomain": "cluster.local",
+                "cpuManagerReconcilePeriod": "0s",
+                "evictionHard": {
+                    "imagefs.available": "0%",
+                    "nodefs.available": "0%",
+                    "nodefs.inodesFree": "0%"
+                },
+                "evictionPressureTransitionPeriod": "0s",
+                "fileCheckFrequency": "0s",
+                "healthzBindAddress": "127.0.0.1",
+                "healthzPort": 10248,
+                "httpCheckFrequency": "0s",
+                "imageGCHighThresholdPercent": 100,
+                "imageMinimumGCAge": "0s",
+                "kind": "KubeletConfiguration",
+                "logging": {},
+                "nodeStatusReportFrequency": "0s",
+                "nodeStatusUpdateFrequency": "0s",
+                "rotateCertificates": true,
+                "runtimeRequestTimeout": "0s",
+                "shutdownGracePeriod": "0s",
+                "shutdownGracePeriodCriticalPods": "0s",
+                "staticPodPath": "/etc/kubernetes/manifests",
+                "streamingConnectionIdleTimeout": "0s",
+                "syncFrequency": "0s",
+                "volumeStatsAggPeriod": "0s"
+            }
+        },
+        "pid": "694",
+        "stat": {
+            "EffectiveGID": "",
+            "EffectiveUID": "",
+            "Group": "694",
+            "Name": "kubelet",
+            "Nice": "0",
+            "Parent": "1",
+            "RealGID": "",
+            "RealUID": "",
+            "ResidentSize": "70384000",
+            "SavedGID": "",
+            "SavedUID": "",
+            "StartTime": "49170",
+            "State": "S",
+            "SystemTime": "764",
+            "Threads": "17",
+            "TotalSize": "2069956000",
+            "UserTime": "1250"
+        }
+    },
+    "resource_id": "694",
+    "result": {
+        "evaluation": "failed",
+        "evidence": {
+            "process_args": {
+                "--/usr/bin/kubelet": "",
+                "--bootstrap-kubeconfig": "/etc/kubernetes/bootstrap-kubelet.conf",
+                "--cgroup-root": "/kubelet",
+                "--config": "/var/lib/kubelet/config.yaml",
+                "--container-runtime": "remote",
+                "--container-runtime-endpoint": "unix:///run/containerd/containerd.sock",
+                "--fail-swap-on": "false",
+                "--kubeconfig": "/etc/kubernetes/kubelet.conf",
+                "--node-ip": "172.18.0.2",
+                "--node-labels": "",
+                "--pod-infra-container-image": "k8s.gcr.io/pause:3.4.1",
+                "--provider-id": "kind://docker/kind-mono/kind-mono-control-plane"
+            },
+            "process_config": {
+                "config": {
+                    "apiVersion": "kubelet.config.k8s.io/v1beta1",
+                    "authentication": {
+                        "anonymous": {
+                            "enabled": false
+                        },
+                        "webhook": {
+                            "cacheTTL": "0s",
+                            "enabled": true
+                        },
+                        "x509": {
+                            "clientCAFile": "/etc/kubernetes/pki/ca.crt"
+                        }
+                    },
+                    "authorization": {
+                        "mode": "Webhook",
+                        "webhook": {
+                            "cacheAuthorizedTTL": "0s",
+                            "cacheUnauthorizedTTL": "0s"
+                        }
+                    },
+                    "cgroupDriver": "cgroupfs",
+                    "clusterDNS": [
+                        "10.96.0.10"
+                    ],
+                    "clusterDomain": "cluster.local",
+                    "cpuManagerReconcilePeriod": "0s",
+                    "evictionHard": {
+                        "imagefs.available": "0%",
+                        "nodefs.available": "0%",
+                        "nodefs.inodesFree": "0%"
+                    },
+                    "evictionPressureTransitionPeriod": "0s",
+                    "fileCheckFrequency": "0s",
+                    "healthzBindAddress": "127.0.0.1",
+                    "healthzPort": 10248,
+                    "httpCheckFrequency": "0s",
+                    "imageGCHighThresholdPercent": 100,
+                    "imageMinimumGCAge": "0s",
+                    "kind": "KubeletConfiguration",
+                    "logging": {},
+                    "nodeStatusReportFrequency": "0s",
+                    "nodeStatusUpdateFrequency": "0s",
+                    "rotateCertificates": true,
+                    "runtimeRequestTimeout": "0s",
+                    "shutdownGracePeriod": "0s",
+                    "shutdownGracePeriodCriticalPods": "0s",
+                    "staticPodPath": "/etc/kubernetes/manifests",
+                    "streamingConnectionIdleTimeout": "0s",
+                    "syncFrequency": "0s",
+                    "volumeStatsAggPeriod": "0s"
+                }
+            }
+        },
+        "expected": null
+    },
+    "rule": {
+        "audit": "Run the following command on each node:\n```\nps -ef | grep kubelet\n```\nVerify that if the `--make-iptables-util-chains` argument exists then it is set to `true`.\nIf the `--make-iptables-util-chains` argument does not exist, and there is a Kubelet config\nfile specified by `--config`, verify that the file does not set `makeIPTablesUtilChains` to\n`false`.\n",
+        "benchmark": {
+            "name": "CIS Kubernetes V1.20",
+            "version": "v1.0.0"
+        },
+        "default_value": "By default, `--make-iptables-util-chains` argument is set to `true`.\n",
+        "description": "Allow Kubelet to manage iptables.\n",
+        "id": "64762605-406e-5801-8953-77f3447eff31",
+        "impact": "Kubelet would manage the iptables on the system and keep it in sync. If you are using any other iptables management solution, then there might be some conflicts.\n",
+        "name": "Ensure that the --make-iptables-util-chains argument is set to true (Automated)",
+        "profile_applicability": "* Level 1 - Worker Node\n",
+        "rationale": "Kubelets can automatically manage the required changes to iptables based on how you choose your networking options for the pods. It is recommended to let kubelets manage the changes to iptables. This ensures that the iptables configuration remains in sync with pods networking configuration. Manually configuring iptables with dynamic pod network configuration changes might hamper the communication between pods/containers and to the outside world. You might have iptables rules too restrictive or too open.\n",
+        "references": "1. [https://kubernetes.io/docs/admin/kubelet/](https://kubernetes.io/docs/admin/kubelet/)\n",
+        "remediation": "If using a Kubelet config file, edit the file to set\n`makeIPTablesUtilChains: true`.\nIf using command line arguments, edit the kubelet service file\n`/etc/systemd/system/kubelet.service.d/10-kubeadm.conf` on each worker node and\nremove the `--make-iptables-util-chains` argument from the\n`KUBELET_SYSTEM_PODS_ARGS` variable.\nBased on your system, restart the `kubelet` service. For example:\n```\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n```\n",
+        "section": "Kubelet",
+        "tags": [
+            "CIS",
+            "Kubernetes",
+            "CIS 4.2.7",
+            "Kubelet"
+        ],
+        "version": "1.0"
+    },
+    "type": "process"
+}
