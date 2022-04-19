@@ -1,0 +1,330 @@
+{
+  "uid" : "5e7e236bae9f5710",
+  "name" : "test_cloudbeat_pod_exist",
+  "fullName" : "product.tests.test_cloudbeat#test_cloudbeat_pod_exist",
+  "historyId" : "2edb527ff01f9d839a8dff55ac683ad6",
+  "time" : {
+    "start" : 1650357933160,
+    "stop" : 1650357933160,
+    "duration" : 0
+  },
+  "description" : "\n    This test verifies that pods count is equal to nodes count\n    :param data: (Pods list, Nodes list)\n    :return:\n    ",
+  "descriptionHtml" : "<pre><code>This test verifies that pods count is equal to nodes count\n:param data: (Pods list, Nodes list)\n:return:\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "data",
+    "time" : {
+      "start" : 1650357933097,
+      "stop" : 1650357933159,
+      "duration" : 62
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "api_client",
+    "time" : {
+      "start" : 1650357931682,
+      "stop" : 1650357931682,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "k8s",
+    "time" : {
+      "start" : 1650357931683,
+      "stop" : 1650357931684,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "elastic_client",
+    "time" : {
+      "start" : 1650357931682,
+      "stop" : 1650357931683,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "cloudbeat_agent",
+    "time" : {
+      "start" : 1650357931682,
+      "stop" : 1650357931682,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "ci_cloudbeat"
+  }, {
+    "name" : "tag",
+    "value" : "product"
+  }, {
+    "name" : "tag",
+    "value" : "sanity"
+  }, {
+    "name" : "parentSuite",
+    "value" : "product.tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_cloudbeat"
+  }, {
+    "name" : "host",
+    "value" : "test-pod-v1"
+  }, {
+    "name" : "thread",
+    "value" : "9-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "product.tests.test_cloudbeat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 11,
+        "skipped" : 0,
+        "passed" : 60,
+        "unknown" : 0,
+        "total" : 71
+      },
+      "items" : [ {
+        "uid" : "b605f1cb615550bd",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/371//#testresult/b605f1cb615550bd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650300270474,
+          "stop" : 1650300270474,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "de0f3a9dece1c450",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/370//#testresult/de0f3a9dece1c450",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650299872693,
+          "stop" : 1650299872693,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9181fb72150b9237",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/369//#testresult/9181fb72150b9237",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650297647848,
+          "stop" : 1650297647848,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "695a97db7a14c4",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/368//#testresult/695a97db7a14c4",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650292206093,
+          "stop" : 1650292206093,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1678811ceceac877",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/367//#testresult/1678811ceceac877",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650290632149,
+          "stop" : 1650290632149,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "ed2bbf73f732924",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/366//#testresult/ed2bbf73f732924",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650287545415,
+          "stop" : 1650287545415,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "3a5676a4fa207455",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/365//#testresult/3a5676a4fa207455",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650287525684,
+          "stop" : 1650287525684,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9a1cb10a7a57b15a",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/364//#testresult/9a1cb10a7a57b15a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650285031196,
+          "stop" : 1650285031196,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "51237ccbd9cae15",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/363//#testresult/51237ccbd9cae15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650283071765,
+          "stop" : 1650283071765,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "4940fa5aaf9a63",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/362//#testresult/4940fa5aaf9a63",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650281478453,
+          "stop" : 1650281478453,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "d66334beffb91686",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/361//#testresult/d66334beffb91686",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650277329360,
+          "stop" : 1650277329360,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "1ad772e0ab1cb1ef",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/360//#testresult/1ad772e0ab1cb1ef",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650276461445,
+          "stop" : 1650276461445,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "87a867a8aa65ce15",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/359//#testresult/87a867a8aa65ce15",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650274408600,
+          "stop" : 1650274408600,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "2076b3289d8ecb12",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/358//#testresult/2076b3289d8ecb12",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650273670714,
+          "stop" : 1650273670714,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f0337c4a121fad1d",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/357//#testresult/f0337c4a121fad1d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650271156201,
+          "stop" : 1650271156202,
+          "duration" : 1
+        }
+      }, {
+        "uid" : "5aaf1de3d7ef223a",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/355//#testresult/5aaf1de3d7ef223a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650269668835,
+          "stop" : 1650269668835,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "b3982125910e1a0a",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/354//#testresult/b3982125910e1a0a",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650267275618,
+          "stop" : 1650267275618,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "f8ef305ca8e324f1",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/353//#testresult/f8ef305ca8e324f1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650266265600,
+          "stop" : 1650266265600,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "da07b47ac83fd6b1",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/351//#testresult/da07b47ac83fd6b1",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650216783049,
+          "stop" : 1650216783049,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "eaeb347584ec0284",
+        "reportUrl" : "https://elastic.github.io/cloudbeat/348//#testresult/eaeb347584ec0284",
+        "status" : "passed",
+        "time" : {
+          "start" : 1650216670329,
+          "stop" : 1650216670329,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "product", "ci_cloudbeat", "sanity" ]
+  },
+  "source" : "5e7e236bae9f5710.json",
+  "parameterValues" : [ ]
+}
