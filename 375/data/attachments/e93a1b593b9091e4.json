@@ -1,0 +1,111 @@
+{
+    "@timestamp": "2022-04-20T08:34:04.722Z",
+    "agent": {
+        "ephemeral_id": "79ca7a76-4ac6-4a8e-b190-97eb872e8717",
+        "id": "c5974e2e-bbe7-4fbd-b8e8-9266b4396796",
+        "name": "kind-mono-control-plane",
+        "type": "cloudbeat",
+        "version": "8.3.0"
+    },
+    "cloud": {
+        "account": {},
+        "instance": {
+            "id": "542f4ee5-7095-44c3-a3a3-fa169aadf629",
+            "name": "SCUS-GHEUS21U20SCUSC24-0273"
+        },
+        "machine": {
+            "type": "Standard_DS2_v2"
+        },
+        "provider": "azure",
+        "region": "southcentralus",
+        "service": {
+            "name": "Virtual Machines"
+        }
+    },
+    "cluster_id": "44aeada2-535d-4add-a55a-9a3b96dc792d",
+    "cycle_id": "5a959ffb-c7b0-4c5d-9551-2b74a44e50c2",
+    "ecs": {
+        "version": "8.0.0"
+    },
+    "host": {
+        "architecture": "x86_64",
+        "containerized": true,
+        "hostname": "kind-mono-control-plane",
+        "ip": [
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "10.244.0.1",
+            "172.18.0.2",
+            "fc00:f853:ccd:e793::2",
+            "fe80::42:acff:fe12:2"
+        ],
+        "mac": [
+            "02:42:ac:12:00:02",
+            "22:ea:c9:9b:b5:9c",
+            "32:54:fc:35:e5:c3",
+            "6a:c5:8c:89:70:06",
+            "ba:9c:ac:c8:b7:ab"
+        ],
+        "name": "kind-mono-control-plane",
+        "os": {
+            "codename": "bullseye",
+            "family": "debian",
+            "kernel": "5.13.0-1021-azure",
+            "name": "Debian GNU/Linux",
+            "platform": "debian",
+            "type": "linux",
+            "version": "11 (bullseye)"
+        }
+    },
+    "resource": {
+        "apiVersion": "v1",
+        "kind": "ServiceAccount",
+        "metadata": {
+            "creationTimestamp": "2022-04-20T08:30:13Z",
+            "name": "horizontal-pod-autoscaler",
+            "namespace": "kube-system",
+            "resourceVersion": "404",
+            "uid": "4b271f97-67b8-4edc-a661-a19b9c5daadc"
+        },
+        "secrets": [
+            {
+                "name": "horizontal-pod-autoscaler-token-bqtz4"
+            }
+        ]
+    },
+    "resource_id": "4b271f97-67b8-4edc-a661-a19b9c5daadc",
+    "result": {
+        "evaluation": "passed",
+        "evidence": {
+            "serviceAccount": [],
+            "serviceAccounts": []
+        },
+        "expected": null
+    },
+    "rule": {
+        "audit": "For each namespace in the cluster, review the rights assigned to the default service account and ensure that it has no roles or cluster roles bound to it apart from the defaults. Additionally ensure that the `automountServiceAccountToken: false` setting is in place for each default service account.\n",
+        "benchmark": {
+            "name": "CIS Kubernetes V1.20",
+            "version": "v1.0.0"
+        },
+        "default_value": "By default the `default` service account allows for its service account token\nto be mounted\nin pods in its namespace.\n",
+        "description": "The `default` service account should not be used to ensure that rights granted to applications can be more easily audited and reviewed.\n",
+        "id": "823f5e65-6aa3-5248-a099-f7da1d54ab97",
+        "impact": "All workloads which require access to the Kubernetes API will require an explicit service account to be created.\n",
+        "name": "Ensure that default service accounts are not actively used. (Manual)",
+        "profile_applicability": "* Level 1 - Master Node\n",
+        "rationale": "Kubernetes provides a `default` service account which is used by cluster workloads where no specific service account is assigned to the pod. Where access to the Kubernetes API from a pod is required, a specific service account should be created for that pod, and rights granted to that service account. The default service account should be configured such that it does not provide a service account token and does not have any explicit rights assignments.\n",
+        "references": "1. [https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)\n",
+        "remediation": "Create explicit service accounts wherever a Kubernetes workload requires\nspecific access\nto the Kubernetes API server.\nModify the configuration of each default service account to include this value\n```\nautomountServiceAccountToken: false\n```\n",
+        "section": "RBAC and Service Accounts",
+        "tags": [
+            "CIS",
+            "Kubernetes",
+            "CIS 5.1.5",
+            "RBAC and Service Accounts"
+        ],
+        "version": "1.0"
+    },
+    "type": "kube-api"
+}
