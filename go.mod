@@ -32,6 +32,7 @@ require (
 )
 
 require (
+	github.com/elastic/elastic-agent-libs v0.1.1
 	github.com/elastic/go-licenser v0.4.0
 	github.com/open-policy-agent/opa v0.38.1
 	github.com/pkg/errors v0.9.1

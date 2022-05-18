@@ -34,6 +34,8 @@ import (
 	"github.com/elastic/beats/v7/libbeat/processors"
 	csppolicies "github.com/elastic/csp-security-policies/bundle"
 
+	newlogp "github.com/elastic/elastic-agent-libs/logp"
+
 	"github.com/gofrs/uuid"
 )
 
@@ -48,12 +50,17 @@ type cloudbeat struct {
 	data          *manager.Data
 	evaluator     evaluator.Evaluator
 	transformer   transformer.Transformer
-	log           *logp.Logger
+	log           *newlogp.Logger
 }
 
 // New creates an instance of cloudbeat.
 func New(b *beat.Beat, cfg *common.Config) (beat.Beater, error) {
-	log := logp.NewLogger("cloudbeat")
+	// log := logp.NewLogger("cloudbeat")
+
+	log := newlogp.NewLogger("cloudbeat")
+
+	log.Infof("TEST INFO")
+	log.Errorf("TEST ERROR")
 
 	ctx, cancel := context.WithCancel(context.Background())
 
